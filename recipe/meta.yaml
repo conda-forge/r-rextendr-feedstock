@@ -1,4 +1,4 @@
-{% set version = '0.4.2' %}
+{% set version = "0.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rextendr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rextendr/rextendr_{{ version }}.tar.gz
-  sha256: 3bd1f33d88d394618f4be42c5118cfac20aa6fe984a7c800d279600915fe81f6
+  sha256: 45f65fc766e2b22886f2e2e8f9fb59b3cda3c7af03878e15c83dfecc303a14ab
 
 build:
   number: 0
@@ -67,10 +67,7 @@ test:
 about:
   home: https://extendr.rs/rextendr/, https://github.com/extendr/rextendr
   license: MIT
-  summary: Provides functions to compile and load Rust code from R, similar to how 'Rcpp' or
-    'cpp11' allow easy interfacing with C++ code. Also provides helper functions to
-    create R packages that use Rust code. Under the hood, the Rust crate 'extendr' is
-    used to do all the heavy lifting.
+  summary: Provides functions to compile and load Rust code from R, similar to how 'Rcpp' or 'cpp11' allow easy interfacing with C++ code. Also provides helper functions to create R packages that use Rust code. Under the hood, the Rust crate 'extendr' is used to do all the heavy lifting.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
